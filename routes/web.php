@@ -29,3 +29,9 @@ Route::resource('galleryProjects', 'gallery_ProjectController');
 Route::resource('catProjects', 'catProjectController');
 
 Route::resource('services', 'servicesController');
+
+Route::resource('siteStings', 'siteStingsController');
+
+Route::resource('sliders', 'sliderController');
+
+Route::resource('reviews', 'ReviewsController');

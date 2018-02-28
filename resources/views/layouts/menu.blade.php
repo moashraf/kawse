@@ -31,3 +31,15 @@
     <a href="{!! route('services.index') !!}"><i class="fa fa-edit"></i><span>Services</span></a>
 </li>
 
+<li class="{{ Request::is('siteStings*') ? 'active' : '' }}">
+    <a href="{!! route('siteStings.index') !!}"><i class="fa fa-edit"></i><span>Site Stings</span></a>
+</li>
+
+<li class="{{ Request::is('sliders*') ? 'active' : '' }}">
+    <a href="{!! route('sliders.index') !!}"><i class="fa fa-edit"></i><span>Sliders</span></a>
+</li>
+
+<li class="{{ Request::is('reviews*') ? 'active' : '' }}">
+    <a href="{!! route('reviews.index') !!}"><i class="fa fa-edit"></i><span>Reviews</span></a>
+</li>
+
