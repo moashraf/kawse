@@ -22,6 +22,10 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('clients', 'clientsController');
 
-Route::resource('clientsses', 'clientssController');
+Route::resource('projects', 'ProjectsController');
 
-Route::resource('clients', 'clientsController');
+Route::resource('galleryProjects', 'gallery_ProjectController');
+
+Route::resource('catProjects', 'catProjectController');
+
+Route::resource('services', 'servicesController');
