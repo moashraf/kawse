@@ -10,13 +10,21 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+ Route::resource('/', 'ccc\fronthomeController');
+ Route::resource('clients', 'ccc\frontclientsController');
+ Route::resource('Projects', 'ccc\frontProjectsController');
+ Route::resource('about', 'ccc\frontaboutController');
+ Route::resource('services', 'ccc\frontservicesController');
+ Route::resource('contact', 'ccc\frontcontactController');
+ 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 
 Auth::routes();
+
+Route::group([  'prefix' => 'admin'], function ()
+{
 
 Route::get('/home', 'HomeController@index');
 
@@ -35,3 +43,4 @@ Route::resource('siteStings', 'siteStingsController');
 Route::resource('sliders', 'sliderController');
 
 Route::resource('reviews', 'ReviewsController');
+});

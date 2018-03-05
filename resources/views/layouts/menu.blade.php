@@ -1,45 +1,32 @@
-<li class="{{ Request::is('clients*') ? 'active' : '' }}">
-    <a href="{!! route('clients.index') !!}"><i class="fa fa-edit"></i><span>Clients</span></a>
-</li>
 
-<li class="{{ Request::is('clientsses*') ? 'active' : '' }}">
-    <a href="{!! route('clientsses.index') !!}"><i class="fa fa-edit"></i><span>Clientsses</span></a>
-</li>
+                                 <ul class="navigation clearfix">
+                                        <li class=" {{ Request::is('/') ? 'current' : '' }} "><a href="#">Home</a>
+                                         
+                                        </li>
+                                        <li  ><a href="{!! route('sliders.index') !!}">About Us</a>
+                                          
+                                        </li>
+                                        <li class="dropdown"><a href="all-services.html">Services</a>
+                                            <ul>
+                                                <li class="dropdown"><a href="all-services.html">All Services</a>  </li>
+                                                <li class="dropdown"><a href="all-services.html">All Services</a>  </li>
+                                                <li class="dropdown"><a href="all-services.html">All Services</a>  </li>
+                                           </ul>
+                                        </li>
+                                        <li class="dropdown  "><a href="#">Our Projects</a>
+                                            <ul>
+                                                <li><a href="projects-three-column.html">Projects 3 Column</a></li>
+                                                <li><a href="projects-four-column.html">Projects 4 Column</a></li>
+                                                <li><a href="project-single.html">Projects Single</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li  ><a href="#">our clients</a>
+                                             
+                                        </li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
 
-<li class="{{ Request::is('clients*') ? 'active' : '' }}">
-    <a href="{!! route('clients.index') !!}"><i class="fa fa-edit"></i><span>Clients</span></a>
-</li>
 
 
-
-
-
-
-<li class="{{ Request::is('projects*') ? 'active' : '' }}">
-    <a href="{!! route('projects.index') !!}"><i class="fa fa-edit"></i><span>Projects</span></a>
-</li>
-
-<li class="{{ Request::is('galleryProjects*') ? 'active' : '' }}">
-    <a href="{!! route('galleryProjects.index') !!}"><i class="fa fa-edit"></i><span>Gallery  Projects</span></a>
-</li>
-
-<li class="{{ Request::is('catProjects*') ? 'active' : '' }}">
-    <a href="{!! route('catProjects.index') !!}"><i class="fa fa-edit"></i><span>Cat Projects</span></a>
-</li>
-
-<li class="{{ Request::is('services*') ? 'active' : '' }}">
-    <a href="{!! route('services.index') !!}"><i class="fa fa-edit"></i><span>Services</span></a>
-</li>
-
-<li class="{{ Request::is('siteStings*') ? 'active' : '' }}">
-    <a href="{!! route('siteStings.index') !!}"><i class="fa fa-edit"></i><span>Site Stings</span></a>
-</li>
-
-<li class="{{ Request::is('sliders*') ? 'active' : '' }}">
-    <a href="{!! route('sliders.index') !!}"><i class="fa fa-edit"></i><span>Sliders</span></a>
-</li>
-
-<li class="{{ Request::is('reviews*') ? 'active' : '' }}">
-    <a href="{!! route('reviews.index') !!}"><i class="fa fa-edit"></i><span>Reviews</span></a>
-</li>
 
