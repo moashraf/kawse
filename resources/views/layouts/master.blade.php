@@ -59,7 +59,7 @@
                     </div>
                     <!--Top Right-->
                     <div class="top-right pull-right">
-                        <a href="contact.html" class="theme-btn quote-btn"><i class="fa fa-share"></i> Get a Quote</a>
+                        <a href="{!!  URL::to('/'); !!} " class="theme-btn quote-btn"><i class="fa fa-share"></i> Get a Quote</a>
                     </div>
                     <!--Top Right-->
                     <div class="top-right pull-right">
@@ -80,7 +80,7 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="logo">
-                                <a href="index.html"><img src="images/kawse-1.png" alt="logo"></a>
+                                <a href="{!!  URL::to('/'); !!}"><img src="images/kawse-1.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-sm-9">
@@ -117,7 +117,7 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index.html" class="img-responsive"><img src="images/kawse-1.png" alt="Transpo" title="Transpo"></a>
+                        <a href="{!!  URL::to('/'); !!}" class="img-responsive"><img src="images/kawse-1.png" alt="Transpo" title="Transpo"></a>
                     </div>
 
                     <!--Right Col-->

@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
- Route::resource('/', 'ccc\fronthomeController');
+ Route::get('/', 'ccc\fronthomeController@index');
  Route::resource('clients', 'ccc\frontclientsController');
  Route::resource('Projects', 'ccc\frontProjectsController');
  Route::resource('about', 'ccc\frontaboutController');

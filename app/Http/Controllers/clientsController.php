@@ -57,6 +57,15 @@ class clientsController extends AppBaseController
     {
         $input = $request->all();
 
+ 
+    $photoexplode = $request->img->getClientOriginalName();
+                $photoexplode = explode(".", $photoexplode);
+                $namerand = rand();
+                $namerand.= $photoexplode[0];
+                $imageNameGallery = $namerand . '.' . $request->img->getClientOriginalExtension();
+               $request->img->move(base_path() . '/public/data/', $imageNameGallery);
+$input['img']=    $imageNameGallery;
+
         $clients = $this->clientsRepository->create($input);
 
         Flash::success('Clients saved successfully.');

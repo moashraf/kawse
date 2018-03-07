@@ -4,6 +4,9 @@ namespace App\Http\Controllers\ccc;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+ use App\Models\clients;
+ use App\Models\services;
+ use App\Models\slider;
 
 class fronthomeController extends Controller
 {
@@ -14,7 +17,10 @@ class fronthomeController extends Controller
      */
     public function index()
     {
-        //
+      $services =   services::take(6)->get();
+      $slider =   slider::take(6)->get();
+       $clients =   clients::take(15)->get();
+        return view('layouts.home')->with('clients', $clients )->with('services', $services )->with('slider', $slider ) ;
     }
 
     /**

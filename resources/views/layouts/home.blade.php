@@ -5,79 +5,48 @@
         <section class="rev_slider_wrapper">
             <div id="slider2" class="rev_slider" data-version="5.0">
                 <ul>
-                    <!-- SLIDE  -->
-                    <li data-transition="random">
-                        <img src="images/main-slider/1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+            
+ 
 
-                        <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-198-layer-1" data-x="right" data-hoffset="" data-y="center" data-voffset="-50" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: normal; font-size: 16px; line-height: 24px;margin-bottom:20px;font-weight:normal;">
-                            <div class="smooth-textbox">
-                                <h1>Welcome to Construction Services Company</h1>
 
-                            </div>
-                        </div>
+ @foreach($slider as $sliderval)
 
-                        <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-299-layer-4" data-x="right" data-hoffset="" data-y="center" data-voffset="70" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: normal; font-size: 20px; line-height: 30px;font-weight:400;">
-                            <div class="smooth-textbox">
-                                <p>We provide comprehensive Building & construction solutions with our expert over 10 years experience</p>
-                            </div>
-                        </div>
 
-                        <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-398-layer-3" data-x="right" data-hoffset="" data-y="center" data-voffset="180" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 50px;font-weight:500;">
-                            <div class="slidebtns smooth-textbox">
-                                <a href="#" class="slidebtn1">Our Company</a>
-                                <a href="#" class="slidebtn2">Contact Us</a>
-                            </div>
 
-                        </div>
-                    </li>
 
-                    <!-- SLIDE  -->
-                    <li data-transition="random">
-                        <img src="images/main-slider/15.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-                        <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-498-layer-1" data-x="center" data-hoffset="" data-y="center" data-voffset="-50" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: normal; font-size: 16px; line-height: 24px;margin-bottom:20px;font-weight:normal;text-align:center;">
-                            <div class="smooth-textbox">
-                                <h1>Provide Innovative Construction Solution</h1>
-                            </div>
-                        </div>
 
-                        <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-599-layer-4" data-x="center" data-hoffset="" data-y="center" data-voffset="70" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: normal; font-size: 20px; line-height: 30px;font-weight:400;">
-                            <div class="smooth-textbox text-center">
-                                <p>We provide comprehensive Building & construction solutions with our expert over 10 years experience</p>
-                            </div>
-                        </div>
-
-                        <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-698-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="180" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 50px;font-weight:500;text-align:center;">
-                            <div class="slidebtns smooth-textbox">
-                                <a href="#" class="slidebtn1">Our Company</a>
-                                <a href="#" class="slidebtn2">Contact Us</a>
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <!-- SLIDE  -->
-                    <li data-transition="random">
-                        <img src="images/main-slider/14.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+                     <li data-transition="random">
+                        <img src="{{ URL::to('/').'/data/'.$sliderval->photo}}" alt=" {!! $sliderval->Title !!}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
                         <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-798-layer-1" data-x="left" data-hoffset="" data-y="center" data-voffset="-50" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: normal; font-size: 16px; line-height: 24px;margin-bottom:20px;font-weight:normal;">
                             <div class="smooth-textbox">
-                                <h1>Assuring you of Our Best Services & Solutions</h1>
+                                <h1> {!! $sliderval->title !!} </h1>
                             </div>
                         </div>
 
                         <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-899-layer-4" data-x="left" data-hoffset="" data-y="center" data-voffset="70" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: normal; font-size: 20px; line-height: 30px;font-weight:400;">
                             <div class="smooth-textbox">
-                                <p>We provide comprehensive Building & construction solutions with our expert over 10 years experience</p>
+                                <p> {!! $sliderval->body !!} </p>
                             </div>
                         </div>
 
                         <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-998-layer-3" data-x="left" data-hoffset="" data-y="center" data-voffset="180" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 50px;font-weight:500;">
                             <div class="slidebtns smooth-textbox">
-                                <a href="#" class="slidebtn1">Our Company</a>
-                                <a href="#" class="slidebtn2">Contact Us</a>
+                                <a href="{!! route('contact.index') !!}" class="slidebtn1">Our Company</a>
+                                <a href="{!! route('contact.index') !!}" class="slidebtn2">Contact Us</a>
                             </div>
 
                         </div>
                     </li>
+
+
+
+
+
+                        @endforeach
+
+
+
+
                 </ul>
             </div>
         </section>
@@ -101,132 +70,40 @@
 		<section class="weltopservice">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				 
+ @foreach($services as $servicessval)
+           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<div class="singleserv_item">
 							<div class="serviceitem-image">
 								<div class="ovrly19">
-									<img src="images/services/8.jpg" alt="image">
+									<img src="{{ URL::to('/').'/data/'.$servicessval->photo}}" alt="{!! $servicessval->title !!}">
 									<div class="ovrly"></div>
 									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/8.jpg"></a>
+										<a href="{!! $servicessval->id !!}" class="fa fa-link"></a>
+										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="{{ URL::to('/').'/data/'.$servicessval->photo}}"></a>
 									</div>
 								</div>
 							</div>
 							<div class="serviceitem-content">
-								<h3><a href="business-industry.html">Construction Consultant</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
+								<h3><a href="{!! $servicessval->id !!}"> {!! $servicessval->title !!}  </a></h3>
+							<a href="{!! $servicessval->id !!}"> 	<p> 
+								 <?php
+								  $pieces = explode(" ",$servicessval->body );
+$first_part = implode(" ", array_splice($pieces, 0, 25)); 
+
+echo $first_part ;  ?> ...
+								</p></a>
 								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
+									<a href="{!! $servicessval->id !!}" class="readmore-btn">READ MORE</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/7.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/7.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="taxation.html">General Contracting</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/9.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/9.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="investment-planning.html">Architectural Design</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/10.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/10.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="retirement-planning">Reconstruction Services</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/12.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/12.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="#">Building Information</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/13.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/13.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="#">Project Partnering</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
+
+ 
+
+                        @endforeach
+
 				</div>	
 			</div>	
 		 </section>		
@@ -638,33 +515,17 @@
         <section class="parterer-sec">
             <div class="auto-container">
                 <div class="partener-slider">
+
+                	    @foreach($clients as $clientsval)
+
                     <div class="image-box">
-                        <a href="#"><img src="images/clients/1.png" alt=""></a>
+                        <a href="{!! $clientsval->link !!}">
+                        	<img src="{{ URL::to('/').'/data/'.$clientsval->img}}" alt="{!! $clientsval->title !!}">
+                        </a>
                     </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/2.png" alt=""></a>
-                    </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/3.png" alt=""></a>
-                    </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/4.png" alt=""></a>
-                    </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/5.png" alt=""></a>
-                    </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/1.png" alt=""></a>
-                    </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/2.png" alt=""></a>
-                    </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/3.png" alt=""></a>
-                    </div>
-                    <div class="image-box">
-                        <a href="#"><img src="images/clients/4.png" alt=""></a>
-                    </div>
+
+                        @endforeach
+
                 </div>
             </div>
         </section>
