@@ -19,8 +19,8 @@
                                            
                                         </li   >
                                         
-                                        <li class=" {{ Request::is('/clients') ? 'current' : '' }} "  >
-                                            <a href="{!! route('clients.index') !!}">our clients</a>
+                                        <li class=" {{ Request::is('/client') ? 'current' : '' }} "  >
+                                            <a href="{!! route('client.index') !!}">our clients</a>
                                              
                                         </li   >
                                         <li class=" {{ Request::is('/contact') ? 'current' : '' }} " >

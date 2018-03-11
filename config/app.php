@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 
+ 
 
 
 
@@ -239,6 +240,7 @@ Prettus\Repository\Providers\RepositoryServiceProvider::class,
         'Form'      => Collective\Html\FormFacade::class,
 'Html'      => Collective\Html\HtmlFacade::class,
 'Flash'     => Laracasts\Flash\Flash::class,
+
 
     ],
 

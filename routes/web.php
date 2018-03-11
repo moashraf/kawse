@@ -11,7 +11,7 @@
 |
 */
  Route::get('/', 'ccc\fronthomeController@index');
- Route::resource('clients', 'ccc\frontclientsController');
+ Route::resource('client', 'ccc\frontclientsController');
  Route::resource('Projects', 'ccc\frontProjectsController');
  Route::resource('about', 'ccc\frontaboutController');
  Route::resource('services', 'ccc\frontservicesController');
