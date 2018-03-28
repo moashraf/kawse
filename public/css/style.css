@@ -4975,6 +4975,8 @@ footer .subscribe_us button:focus {
 }
 
 .page-title h1 {
+	
+PADDING-TOP: 100PX;
     position: relative;
     font-size: 42px;
     font-weight: 700;
@@ -7698,7 +7700,12 @@ Project Detail
 }
 
 .parterer-sec {
-    margin-bottom: 70px;
+  
+}
+
+.about_div {
+      background: rgba(119,119,119,1);
+    padding: 100px;
 }
 
 .partener-slider .owl-dots {

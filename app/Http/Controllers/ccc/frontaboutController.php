@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\ccc;
+ use App\Models\clients;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,7 +15,9 @@ class frontaboutController extends Controller
      */
     public function index()
     {
-        //
+
+       $clients =   clients::take(44)->get();
+          return view('layouts.about-us')->with('clients', $clients ) ;
     }
 
     /**

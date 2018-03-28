@@ -59,4 +59,13 @@ class Projects extends Model
     ];
 
     
+
+     public function get_projects_cat()
+{
+     return $this->hasOne('App\Models\catProject','id','cat');
+}
+
+
+
+
 }

@@ -2,7 +2,7 @@
 @extends('layouts.master')
 @section('content')
         <!--Page Title-->
-        <section class="page-title" style="background-image:url(images/background/page-title-6.jpg);">
+        <section class="page-title" style="background-image:url(images/background/page-title-1.jpg);">
             <div class="auto-container">
                 <h1>Contact Us</h1>
             </div>
@@ -15,25 +15,37 @@
                 <div class="pull-left">
                     <h3>Contact Us</h3>
                 </div>
-                <div class="pull-right">
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index.html">Home</a></li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
+                
             </div>
         </section>
         <!--Page Info end-->
 
         <!--google map-->
         <div class="google-map-area">
-            <div class="google-map" 
-			id="contact-google-map" data-map-lat="30.521338" data-map-lng="31.976751" data-icon-path="images/icons/map-icon.png" data-map-title="Chester" data-map-zoom="10" 
-			data-markers='{
-					"marker-1": [30.521338, 31.976751, "<h4>officeoffice office</h4><p>Lakepool, USA</p>"]
-				}' style="height:450px;width:100%;">
+  
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+      <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: <?php  echo  site_settings("x")   ?> , lng:<?php  echo  site_settings("y")   ?>};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
 
-            </div>
+  
         </div>
         <!--google map end-->
         <!-- contect-page-section -->
@@ -82,25 +94,25 @@
                     <!--Column-->
                     <div class="column col-md-5 col-sm-6 col-xs-12">
                         <div class="inner-box">
-                            <h2>Our Address</h2>
+                            <h2> {{ site_settings("Web site name")  }}   </h2>
 
                             <div class="text">
-                                Lorem ipsum dolor sit amet, placerat corrumpit eum ei. Qui id illum nullam volutpat, vix te posse malis viri. Mei ludus nusquam elaboraret ex an.
+                             {{ site_settings("About Us")  }}
                             </div>
 
                             <div class="contact-info">
                                 <ul>
                                     <li>
                                         <span class="icon flaticon-placeholder"></span>
-                                        <h3>Address</h3> 20c Avenue, lakepool, USA
+                                        <h3>Address</h3>{{ site_settings("Location")  }}
                                     </li>
                                     <li>
                                         <span class="icon flaticon-envelope-1"></span>
-                                        <h3>Email</h3> smaple@gmail.com
+                                        <h3>Email</h3>{{ site_settings("Mail")  }}
                                     </li>
                                     <li>
                                         <span class="icon flaticon-phone-call"></span>
-                                        <h3>PHONE</h3> (+01) 123 456 7896, (+01) 123 456 7899
+                                        <h3>PHONE</h3> {{ site_settings("phone")  }}
                                     </li>
                                 </ul>
                             </div>
@@ -110,5 +122,8 @@
                 </div>
             </div>
         </section>
-        <!-- contect-page-section end -->
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHzPSV2jshbjI8fqnC_C4L08ffnj5EN3A&callback=initMap">
+    </script>
+
  @endsection

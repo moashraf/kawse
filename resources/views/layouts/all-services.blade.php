@@ -1,4 +1,3 @@
-
 @extends('layouts.master')
 @section('content')
         <!--Page Title-->
@@ -15,12 +14,7 @@
                 <div class="pull-left">
                     <h3>All Services</h3>
                 </div>
-                <div class="pull-right">
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index.html">Home</a></li>
-                        <li>All Services</li>
-                    </ul>
-                </div>
+               
             </div>
         </section>
         <!--Page Info end-->
@@ -31,138 +25,46 @@
             <div class="container">
                 <div class="sec-title text-center">
                     <h2>Our Best Serivices</h2>
-                    <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</p>
-                    <span class="colorborder"></span>
+                     <span class="colorborder"></span>
                 </div>			
 				<div class="row">
+				  
+ @foreach($services as $servicessval)
+				 
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<div class="singleserv_item">
 							<div class="serviceitem-image">
 								<div class="ovrly19">
-									<img src="images/services/8.jpg" alt="image">
+									<img src="{{ URL::to('/').'/data/'.$servicessval->photo}}" alt="image">
 									<div class="ovrly"></div>
 									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/8.jpg"></a>
+										<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}" class="fa fa-link"></a>
+										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="{{ URL::to('/').'/data/'.$servicessval->photo}}"></a>
 									</div>
 								</div>
 							</div>
 							<div class="serviceitem-content">
-								<h3><a href="business-industry.html">Construction Consultant</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
+								<h3><a href="{!! URL::to('/service/').'/'. $servicessval->id !!}">  {!! $servicessval->title !!}  </a></h3>
+	<a href="{!! $servicessval->id !!}"> 	<p> 
+								 <?php
+								  $pieces = explode(" ",$servicessval->body );
+$first_part = implode(" ", array_splice($pieces, 0, 25)); 
+
+echo $first_part ;  ?> ...
+								</p></a>								<div class="link">
+									<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}" class="readmore-btn">READ MORE</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/7.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/7.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="taxation.html">General Contracting</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/9.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/9.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="investment-planning.html">Architectural Design</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/10.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/10.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="retirement-planning">Reconstruction Services</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/12.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/12.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="#">Building Information</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<div class="singleserv_item">
-							<div class="serviceitem-image">
-								<div class="ovrly19">
-									<img src="images/services/13.jpg" alt="image">
-									<div class="ovrly"></div>
-									<div class="buttons">
-										<a href="#" class="fa fa-link"></a>
-										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="images/services/13.jpg"></a>
-									</div>
-								</div>
-							</div>
-							<div class="serviceitem-content">
-								<h3><a href="#">Project Partnering</a></h3>
-								<p>Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-								<div class="link">
-									<a href="#" class="readmore-btn">READ MORE</a>
-								</div>
-							</div>
-						</div>
-					</div>
+ 
+
+   @endforeach 
+
 				</div>		
 			</div>	
+			              <CENTER>{{ $services->links() }} </CENTER>>  
+
 		 </section>
         <!--about-section end-->
 

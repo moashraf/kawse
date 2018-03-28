@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\ccc;
+ 
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,7 +15,8 @@ class frontcontactController extends Controller
      */
     public function index()
     {
-        //
+  
+          return view('layouts.contact') ;
     }
 
     /**

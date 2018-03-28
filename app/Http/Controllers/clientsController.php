@@ -56,20 +56,15 @@ class clientsController extends AppBaseController
     public function store(CreateclientsRequest $request)
     {
         $input = $request->all();
-
- 
-    $photoexplode = $request->img->getClientOriginalName();
-                $photoexplode = explode(".", $photoexplode);
-                $namerand = rand();
-                $namerand.= $photoexplode[0];
-                $imageNameGallery = $namerand . '.' . $request->img->getClientOriginalExtension();
-               $request->img->move(base_path() . '/public/data/', $imageNameGallery);
-$input['img']=    $imageNameGallery;
-
+        $photoexplode = $request->img->getClientOriginalName();
+        $photoexplode = explode(".", $photoexplode);
+        $namerand = rand();
+        $namerand.= $photoexplode[0];
+        $imageNameGallery = $namerand . '.' . $request->img->getClientOriginalExtension();
+        $request->img->move(base_path() . '/public/data/', $imageNameGallery);
+        $input['img']=    $imageNameGallery;
         $clients = $this->clientsRepository->create($input);
-
         Flash::success('Clients saved successfully.');
-
         return redirect(route('clients.index'));
     }
 

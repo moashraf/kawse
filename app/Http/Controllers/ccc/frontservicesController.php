@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ccc;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+ use App\Models\services;
 
 class frontservicesController extends Controller
 {
@@ -14,7 +15,8 @@ class frontservicesController extends Controller
      */
     public function index()
     {
-        //
+      $services =   services::paginate(12); 
+         return view('layouts.all-services')->with('services', $services ) ;
     }
 
     /**
@@ -46,7 +48,8 @@ class frontservicesController extends Controller
      */
     public function show($id)
     {
-        //
+      $services =   services::find($id); 
+         return view('layouts.Services-single')->with('services', $services ) ;
     }
 
     /**

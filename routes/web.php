@@ -14,7 +14,7 @@
  Route::resource('client', 'ccc\frontclientsController');
  Route::resource('Projects', 'ccc\frontProjectsController');
  Route::resource('about', 'ccc\frontaboutController');
- Route::resource('services', 'ccc\frontservicesController');
+ Route::resource('service', 'ccc\frontservicesController');
  Route::resource('contact', 'ccc\frontcontactController');
  
 

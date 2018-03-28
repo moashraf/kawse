@@ -1,21 +1,13 @@
- 
 @extends('layouts.master')
 @section('content')
         <!--Main Slider-->
         <section class="rev_slider_wrapper">
             <div id="slider2" class="rev_slider" data-version="5.0">
                 <ul>
-            
- 
-
-
+             
  @foreach($slider as $sliderval)
 
-
-
-
-
-                     <li data-transition="random">
+ <li data-transition="random">
                         <img src="{{ URL::to('/').'/data/'.$sliderval->photo}}" alt=" {!! $sliderval->Title !!}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
                         <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-798-layer-1" data-x="left" data-hoffset="" data-y="center" data-voffset="-50" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: normal; font-size: 16px; line-height: 24px;margin-bottom:20px;font-weight:normal;">
                             <div class="smooth-textbox">
@@ -57,9 +49,9 @@
 		<section class="welblock">
 			<div class="container">
 				<div class="welinfobox">
-					<h2>Welcome To Our Construction Company</h2>
+					<h2>{{ site_settings("call action")  }}</h2>
 					
-					<a href="#" class="welcontact">Contact Us</a>
+					<a href="{{ URL::to('/contact')}}" class="welcontact">Contact Us</a>
 				</div>
 			</div>
 		</section>
@@ -69,6 +61,10 @@
 		 <!--wel service Section-->
 		<section class="weltopservice">
 			<div class="container">
+                 <div class="sec-title text-center">
+                    <h2> Services     </h2>
+                     <span class="colorborder"></span>
+                </div>
 				<div class="row">
 				 
  @foreach($services as $servicessval)
@@ -109,118 +105,7 @@ echo $first_part ;  ?> ...
 		 </section>		
 		 <!--wel service Section end-->
 		
-        <!--counter Section-->
-        <div class="counter-style3 bgblackstyle" style="     background: #ffffff; ">
-            <div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-6">
-						<div class="sec-title text-left">
-                            <h2>Why Choose Us</h2>
-                            <span class="colorborder whtbg"></span>
-                        </div>
-						<div class="whychoose">
-							<div class="panel-group dg-accordion01" id="dg-acc03">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title"><a data-parent="#dg-acc03" data-toggle="collapse" href="#dg-03-1"><span class="arrow"></span>Latest Technology</a></h4>
-									</div>
-									<div class="panel-collapse collapse in" id="dg-03-1">
-										<div class="panel-body">
-											<p>Lorem ipsum dolort amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapient justo. Nulla varius consequat magna, molestie ipsum volutpat</p>
-										</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title"><a class="collapsed" data-parent="#dg-acc03" data-toggle="collapse" href="#dg-03-2"><span class="arrow"></span>Licensed & Insured</a></h4>
-									</div>
-									<div class="panel-collapse collapse" id="dg-03-2">
-										<div class="panel-body">
-											<p>Lorem ipsum dolort amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapient justo. Nulla varius consequat magna, molestie ipsum volutpat</p>
-										</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title"><a class="collapsed" data-parent="#dg-acc03" data-toggle="collapse" href="#dg-03-3"><span class="arrow"></span>Profesional Workers</a></h4>
-									</div>
-									<div class="panel-collapse collapse" id="dg-03-3">
-										<div class="panel-body">
-											<p>Lorem ipsum dolort amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapient justo. Nulla varius consequat magna, molestie ipsum volutpat</p>
-										</div>
-									</div>
-								</div>
-							</div>				
-						</div>
-					</div>
-
-					<div class="col-sm-12 col-md-6">
-						<div class="awardwrp">
-							<div class="sec-title text-left">
-								<h2>See Some Facts In Numbers</h2>
-								<span class="colorborder"></span>
-							</div>
-							<div class="row">
-								<div class="col-sm-6 col-md-6">
-									<div class="awards-box">
-										<div class="media">
-											<a href="#" class="pull-left">
-												<i class="fa flaticon-eye" aria-hidden="true"></i>
-											</a>
-											<div class="media-body">
-												<h3 class="timer" data-from="50" data-to="2800" data-speed="5000" data-refresh-interval="50">2800</h3>
-												<p>Happy Clients</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-6">
-									<div class="awards-box">
-										<div class="media">
-											<a href="#" class="pull-left">
-												<i class="fa  flaticon-trophy-2" aria-hidden="true"></i>
-											</a>
-											<div class="media-body">
-												<h3 class="timer" data-from="50" data-to="860" data-speed="5000" data-refresh-interval="50">860</h3>
-												<p>Awards Win</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-6">
-									<div class="awards-box">
-										<div class="media">
-											<a href="#" class="pull-left">
-												<i class="fa flaticon-quality" aria-hidden="true"></i>
-											</a>
-											<div class="media-body">
-												<h3 class="timer" data-from="50" data-to="2250" data-speed="5000" data-refresh-interval="50">2250</h3>
-												<p>Finished Work</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-6">
-									<div class="awards-box">
-										<div class="media">
-											<a href="#" class="pull-left">
-												<i class="fa flaticon-worker" aria-hidden="true"></i>
-											</a>
-											<div class="media-body">
-												<h3 class="timer" data-from="50" data-to="600" data-speed="5000" data-refresh-interval="50">600</h3>
-												<p>Team Members</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<p class="awardpara">Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit</p>
-						</div>
-					</div>
-				</div>
-            </div>
-        </div>
-        <!--counter Section end-->
+     
  
 
         <!--Gallery Section-->
@@ -235,25 +120,35 @@ echo $first_part ;  ?> ...
                     <!--Filter-->
                     <div class="filters text-center">
                         <ul class="filter-tabs filter-btns clearfix">
-                            <li class="active filter" data-role="button" data-filter="all">All Projects</li>
-                            <li class="filter" data-role="button" data-filter=".meterial">Office Building</li>
-                            <li class="filter" data-role="button" data-filter=".power">Shopping Mall</li>
-                            <li class="filter" data-role="button" data-filter=".chemical">Private Estate</li>
+                            <li class="active filter" data-role="button" data-filter="all">All  </li>
+ @foreach($catProject as $catProjectval)
+                                <a href="{!! $catProjectval->id !!}">
+                            <li class="filter" data-role="button"  >
+                             {!! $catProjectval->title !!}   </li>
+                              </a>
+                        @endforeach
+                        
                         </ul>
                     </div>
 
                     <!--Filter List-->
                     <div class="filter-list row clearfix">
-
-                        <!--Default Portfolio Item-->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all meterial">
+ @foreach($Projects as $Projectsval)
+              <!--Default Portfolio Item-->
+             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all 
+              {!! $Projectsval->get_projects_cat->id !!}">
                             <div class="glrybox">
-                                <a href="#">
-                                    <img src="images/gallery/37.jpg" alt="image">
+                                <a href="{!! $Projectsval->id !!}">
+                                    <img src="{{ URL::to('/').'/data/'.$Projectsval->photo}}" alt="image">
                                     <div class="glryinfo">
                                         <div class="projinrtext">
-                                            <h3>Office Building</h3>
-                                            <p>Typi non habent claritatem insitam usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt. </p>
+                                            <h3> {!! $Projectsval->title !!}  </h3>
+                                            <p> 
+                                             <?php
+								  $Project = explode(" ",$Projectsval->body );
+$first_part = implode(" ", array_splice($Project, 0, 20)); 
+
+echo $first_part ;  ?> ... </p>
                                             <span class="vbtn">View Project</span>
                                         </div>
                                     </div>
@@ -261,85 +156,8 @@ echo $first_part ;  ?> ...
                             </div>
                         </div>
 
-                        <!--Default Portfolio Item-->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all meterial">
-                            <div class="glrybox">
-                                <a href="#">
-                                    <img src="images/gallery/38.jpg" alt="image">
-                                    <div class="glryinfo">
-                                        <div class="projinrtext">
-                                            <h3>Shopping Mall</h3>
-                                            <p>Typi non habent claritatem insitam usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt. </p>
-                                            <span class="vbtn">View Project</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
 
-                        <!--Default Portfolio Item-->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all power">
-                            <div class="glrybox">
-                                <a href="#">
-                                    <img src="images/gallery/39.jpg" alt="image">
-                                    <div class="glryinfo">
-                                        <div class="projinrtext">
-                                            <h3>Hospital Building</h3>
-                                            <p>Typi non habent claritatem insitam usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt. </p>
-                                            <span class="vbtn">View Project</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--Default Portfolio Item-->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all power">
-                            <div class="glrybox">
-                                <a href="#">
-                                    <img src="images/gallery/40.jpg" alt="image">
-                                    <div class="glryinfo">
-                                        <div class="projinrtext">
-                                            <h3>Private Estate</h3>
-                                            <p>Typi non habent claritatem insitam usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt. </p>
-                                            <span class="vbtn">View Project</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--Default Portfolio Item-->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all chemical">
-                            <div class="glrybox">
-                                <a href="#">
-                                    <img src="images/gallery/41.jpg" alt="image">
-                                    <div class="glryinfo">
-                                        <div class="projinrtext">
-                                            <h3>Private Residence</h3>
-                                            <p>Typi non habent claritatem insitam usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt. </p>
-                                            <span class="vbtn">View Project</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--Default Portfolio Item-->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all chemical">
-                            <div class="glrybox">
-                                <a href="#">
-                                    <img src="images/gallery/42.jpg" alt="image">
-                                    <div class="glryinfo">
-                                        <div class="projinrtext">
-                                            <h3>Swimming Pool</h3>
-                                            <p>Typi non habent claritatem insitam usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt. </p>
-                                            <span class="vbtn">View Project</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -356,22 +174,34 @@ echo $first_part ;  ?> ...
                             <span class="colorborder"></span>
                         </div>
                         <div class="testm-wrp">
+                            
+
+
+
+
+ @foreach($Reviews as $Reviewsval)
+
                             <div class="textmitem">
                                 <div class="quoteicon">
                                     <i class="fa fa-quote-left" aria-hidden="true"></i>
                                 </div>
                                 <div class="testm-box">
                                     <div class="clntfeed">
-                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.</p>
+                                           <p> 
+                                             <?php
+								  $Reviews = explode(" ",$Reviewsval->body );
+$first_part = implode(" ", array_splice($Reviews, 0, 40)); 
+
+echo $first_part ;  ?> ... </p>
                                     </div>
                                     <div class="clntbox">
                                         <div class="clntinfo">
                                             <div class="clntimg">
-                                                <img src="images/clients/client2.jpg" alt="client Image">
+                                                <img src="{{ URL::to('/').'/data/'.$Reviewsval->photo}}" alt="  {!! $Reviewsval->id !!} ">
                                             </div>
                                             <div class="clntdtl">
-                                                <h3>John Doe</h3>
-                                                <span>Director</span>
+                                                <h3> {!! $Reviewsval->name !!}  </h3>
+                                                <span> {!! $Reviewsval->job !!} </span>
                                             </div>
                                         </div>
                                         <div class="reviewstar">
@@ -386,36 +216,12 @@ echo $first_part ;  ?> ...
                                     </div>
                                 </div>
                             </div>
-                            <div class="textmitem">
-                                <div class="quoteicon">
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <div class="testm-box">
-                                    <div class="clntfeed">
-                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.</p>
-                                    </div>
-                                    <div class="clntbox">
-                                        <div class="clntinfo">
-                                            <div class="clntimg">
-                                                <img src="images/clients/client1.jpg" alt="client Image">
-                                            </div>
-                                            <div class="clntdtl">
-                                                <h3>Michale John</h3>
-                                                <span>Director</span>
-                                            </div>
-                                        </div>
-                                        <div class="reviewstar">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                        @endforeach
+
+
+
+
                         </div>
                     </div>
 
@@ -448,7 +254,7 @@ echo $first_part ;  ?> ...
                                                 <h2 class="lftheading">Request for Quote</h2>
                                                 <span class="colorborder"></span>
                                             </div>
-                                            <p class="quotecallinfo">For Business inquiry fill our feedback form and Troll Free Number or you can call us on <span>(+91) 0123 456 85</span></p>
+                                            <p class="quotecallinfo">  <span> {{ site_settings("call action")  }}</span></p>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-sm-6 col-xs-12">
@@ -503,7 +309,7 @@ echo $first_part ;  ?> ...
                         <h3>Looking for a quality and affordable Services</h3>
                     </div>
                     <div class="col-sm-7">
-                        <p>We offer a wide range of construction services to span the entire lifespan of nearly any building project. We are positive we can customize a solution to meet your needs, and exceed your expectations.</p>
+                        <p> {{ site_settings("About Us")  }} </p>
                     </div>
                 </div>
             </div>
@@ -514,12 +320,18 @@ echo $first_part ;  ?> ...
         <!--Partener slider -->
         <section class="parterer-sec">
             <div class="auto-container">
-                <div class="partener-slider">
+                <br>
+
+                 <div class="sec-title text-center">
+                    <h2> Our Happy Clients    </h2>
+                     <span class="colorborder"></span>
+                </div>
+                 <div class="partener-slider">
 
                 	    @foreach($clients as $clientsval)
 
                     <div class="image-box">
-                        <a href="{!! $clientsval->link !!}">
+                        <a href="{{ URL::to('/client')}}">
                         	<img src="{{ URL::to('/').'/data/'.$clientsval->img}}" alt="{!! $clientsval->title !!}">
                         </a>
                     </div>
@@ -527,7 +339,7 @@ echo $first_part ;  ?> ...
                         @endforeach
 
                 </div>
-            </div>
+             </div>
         </section>
         <!--Partener slider end-->
 @endsection

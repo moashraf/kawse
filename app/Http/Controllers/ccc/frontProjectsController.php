@@ -4,7 +4,8 @@ namespace App\Http\Controllers\ccc;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+ use App\Models\Projects;
+ use App\Models\catProject;
 class frontProjectsController extends Controller
 {
     /**
@@ -14,7 +15,9 @@ class frontProjectsController extends Controller
      */
     public function index()
     {
-        //
+       $catProject =   catProject::take(10)->get();
+       $Projects =   Projects::paginate(12); 
+         return view('layouts.all_projects')->with('Projects', $Projects )->with('catProject', $catProject ) ;
     }
 
     /**

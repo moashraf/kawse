@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ccc;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+ use App\Models\clients;
 
 class frontclientsController extends Controller
 {
@@ -14,7 +15,8 @@ class frontclientsController extends Controller
      */
     public function index()
     {
-        //
+        $clients =   clients::paginate(12); 
+         return view('layouts.our-clients')->with('clients', $clients )  ;
     }
 
     /**
