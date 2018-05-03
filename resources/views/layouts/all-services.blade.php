@@ -44,8 +44,9 @@
 								</div>
 							</div>
 							<div class="serviceitem-content">
-								<h3><a href="{!! URL::to('/service/').'/'. $servicessval->id !!}">  {!! $servicessval->title !!}  </a></h3>
-	<a href="{!! $servicessval->id !!}"> 	<p> 
+								<h3><a href="{!! URL::to('/service/').'/'. $servicessval->id !!}">  
+								{!! $servicessval->title !!}  </a></h3>
+	<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}"> 	<p> 
 								 <?php
 								  $pieces = explode(" ",$servicessval->body );
 $first_part = implode(" ", array_splice($pieces, 0, 25)); 

@@ -118,6 +118,18 @@ class clientsController extends AppBaseController
      */
     public function update($id, UpdateclientsRequest $request)
     {
+
+        $input = $request->all();
+        $photoexplode = $request->img->getClientOriginalName();
+        $photoexplode = explode(".", $photoexplode);
+        $namerand = rand();
+        $namerand.= $photoexplode[0];
+        $imageNameGallery = $namerand . '.' . $request->img->getClientOriginalExtension();
+        $request->img->move(base_path() . '/public/data/', $imageNameGallery);
+        $input['img']=    $imageNameGallery;
+
+
+
         $clients = $this->clientsRepository->findWithoutFail($id);
 
         if (empty($clients)) {
@@ -126,7 +138,7 @@ class clientsController extends AppBaseController
             return redirect(route('clients.index'));
         }
 
-        $clients = $this->clientsRepository->update($request->all(), $id);
+        $clients = $this->clientsRepository->update( $input, $id);
 
         Flash::success('Clients updated successfully.');
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title> {{ site_settings("Web site name")  }}     </title>
@@ -57,11 +56,7 @@
 
                         </ul>
                     </div>
-                    <!--Top Right-->
-                    <div class="top-right pull-right">
-                        <a href="{!!  URL::to('/contact'); !!} " class="theme-btn quote-btn"><i class="fa fa-share"></i> Get a Quote</a>
-                    </div>
-                    <!--Top Right-->
+                   
                     <div class="top-right pull-right">
                         <div class="social-links clearfix">
                             <a href="{{ site_settings("facebook")  }}"><span class="fa fa-facebook-f"></span></a>
@@ -101,7 +96,43 @@
                                 <div class="navbar-collapse collapse clearfix">
                                     
 
-                            @include('layouts.menu')
+
+                                 <ul class="navigation clearfix">
+                                
+
+
+                                        
+                                        <li class=" {{ Request::is('/') ? 'current' : '' }} ">
+                                            <a href="{!!  URL::to('/'); !!}">Home</a>
+                                       </li>
+                                        <li class=" {{ Request::is('about') ? 'current' : '' }} " >
+                                            <a href="{!! route('about.index') !!}">About Us</a>
+                                          
+                                        </li>
+										
+										 <li class=" {{ Request::is('service') ? 'current' : '' }}  dropdown">
+                                         <a href="{!! route('service.index') !!}">Services</a>
+                                            <ul>
+                                        <?php   $services=  services_mn()  ; ?>
+											 @foreach($services as $servicessval)
+											 <li><a href="{{ URL::to('/').'/service/'.$servicessval->id }} ">{!! $servicessval->title !!}  </a></li>
+                                         @endforeach
+										 </ul>
+                                        <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+										
+                                        <li  class=" {{ Request::is('Projects') ? 'current' : '' }} " ">
+                                            <a href="{!! route('Projects.index') !!}">Our Projects</a>
+                                           
+                                        </li   >
+                                        
+                                        <li class=" {{ Request::is('client') ? 'current' : '' }} "  >
+                                            <a href="{!! route('client.index') !!}">our clients</a>
+                                             
+                                        </li   >
+                                        <li class=" {{ Request::is('contact') ? 'current' : '' }} " >
+                                            <a href="{!! route('contact.index') !!}">Contact Us</a>
+                                        </li>
+                                    </ul>
 
                                     
                                 </div>
@@ -137,10 +168,41 @@
                                 </div>
 
                                 <div class="navbar-collapse collapse clearfix">
-                                   
+                                <ul class="navigation clearfix">
+                                
 
 
-                            @include('layouts.menu')
+                                        
+                                        <li class=" {{ Request::is('/') ? 'current' : '' }} ">
+                                            <a href="{!!  URL::to('/'); !!}">Home</a>
+                                       </li>
+                                        <li class=" {{ Request::is('about') ? 'current' : '' }} " >
+                                            <a href="{!! route('about.index') !!}">About Us</a>
+                                          
+                                        </li>
+										
+										 <li class=" {{ Request::is('service') ? 'current' : '' }}  dropdown">
+                                         <a href="{!! route('service.index') !!}">Services</a>
+                                            <ul>
+											 @foreach($services as $servicessval)
+											 <li><a href=" {{ URL::to('/').'/service/'.$servicessval->id }} ">{!! $servicessval->title !!}  </a></li>
+                                         @endforeach
+										 </ul>
+                                        <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+										
+                                        <li  class=" {{ Request::is('Projects') ? 'current' : '' }} " ">
+                                            <a href="{!! route('Projects.index') !!}">Our Projects</a>
+                                           
+                                        </li   >
+                                        
+                                        <li class=" {{ Request::is('client') ? 'current' : '' }} "  >
+                                            <a href="{!! route('client.index') !!}">our clients</a>
+                                             
+                                        </li   >
+                                        <li class=" {{ Request::is('contact') ? 'current' : '' }} " >
+                                            <a href="{!! route('contact.index') !!}">Contact Us</a>
+                                        </li>
+                                    </ul>
 
 
                                 </div>
@@ -166,7 +228,16 @@
                             <a class="ftlogo" href="#">
                                 <img alt="{{ site_settings('About Us')  }}  " src="{{ URL::to('/').'/data/'.site_settings('logo') }}" />
                             </a>
-                            <p>  {{ site_settings("About Us")  }}  </p>
+                            <p> 
+                                
+                            <?php
+                            $About=site_settings("About Us");
+      $pieces = explode(" ",$About );
+$first_part = implode(" ", array_splice($pieces, 0, 91)); 
+
+echo $first_part ;  ?>
+
+  </p>
                            
 
                         </div>

@@ -24,28 +24,43 @@
         <section class="about-section  ashrafpadding ">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <div class="video-box">
-                             <div class="overlay">
-                                <div class="box">
-                                    <div class="about_div  text-center">
-                                        <a class="video-popup" href="{!!  URL::to('/'); !!}">
-                                        <img src="{{ URL::to('/').'/data/'.site_settings('logo') }}" alt=" 
-                                        {{ site_settings('About Us')  }}"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
+                    
+                    <div class="col-sm-12">
                         <div class="right-side">
                             <h4>   <span class="p-color"> {{ site_settings("Web site name")  }}   </span>  </h4>
                              <p>  {{ site_settings("About Us")  }}</p>
                          </div>
                     </div>
                 </div>
+				
+				
             </div>
         </section>
+		
+		 <section class="about-section  ashrafpadding ">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-sm-6">
+                        <div class="right-side">
+                            <h4>   <span class="p-color"> Vision </span>  </h4>
+                             <p>  {{ site_settings("Vision")  }}</p>
+                         </div>
+                    </div>
+					 <div class="col-sm-6">
+                        <div class="right-side">
+                            <h4>   <span class="p-color">  Mission  </span>  </h4>
+                             <p>  {{ site_settings("Mission")  }}</p>
+                         </div>
+                    </div>
+					
+                </div>
+				
+				
+            </div>
+        </section>
+		 
+		
         <!--about-section end-->
 <hr>
 

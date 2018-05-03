@@ -75,22 +75,22 @@
 									<img src="{{ URL::to('/').'/data/'.$servicessval->photo}}" alt="{!! $servicessval->title !!}">
 									<div class="ovrly"></div>
 									<div class="buttons">
-										<a href="{!! $servicessval->id !!}" class="fa fa-link"></a>
+										<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}" class="fa fa-link"></a>
 										<a  class="fa fa-search lightbox-image" data-fancybox="gallery" href="{{ URL::to('/').'/data/'.$servicessval->photo}}"></a>
 									</div>
 								</div>
 							</div>
 							<div class="serviceitem-content">
-								<h3><a href="{!! $servicessval->id !!}"> {!! $servicessval->title !!}  </a></h3>
-							<a href="{!! $servicessval->id !!}"> 	<p> 
+								<h3><a href="{!! URL::to('/service/').'/'. $servicessval->id !!}"> {!! $servicessval->title !!}  </a></h3>
+							<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}"> 	<p> 
 								 <?php
 								  $pieces = explode(" ",$servicessval->body );
-$first_part = implode(" ", array_splice($pieces, 0, 25)); 
+$first_part = implode(" ", array_splice($pieces, 0, 10)); 
 
 echo $first_part ;  ?> ...
 								</p></a>
 								<div class="link">
-									<a href="{!! $servicessval->id !!}" class="readmore-btn">READ MORE</a>
+									<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}" class="readmore-btn">READ MORE</a>
 								</div>
 							</div>
 						</div>
@@ -122,7 +122,7 @@ echo $first_part ;  ?> ...
                         <ul class="filter-tabs filter-btns clearfix">
                             <li class="active filter" data-role="button" data-filter="all">All  </li>
  @foreach($catProject as $catProjectval)
-                                <a href="{!! $catProjectval->id !!}">
+                                <a href="{!! URL::to('/Projects/').'/'. $catProjectval->id !!}">
                             <li class="filter" data-role="button"  >
                              {!! $catProjectval->title !!}   </li>
                               </a>
@@ -138,7 +138,7 @@ echo $first_part ;  ?> ...
              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project-item mix mix_all  all 
               {!! $Projectsval->get_projects_cat->id !!}">
                             <div class="glrybox">
-                                <a href="{!! $Projectsval->id !!}">
+                                <a href="{!! URL::to('/Projects/').'/'. $Projectsval->id !!}">
                                     <img src="{{ URL::to('/').'/data/'.$Projectsval->photo}}" alt="image">
                                     <div class="glryinfo">
                                         <div class="projinrtext">
@@ -200,7 +200,8 @@ echo $first_part ;  ?> ... </p>
                                                 <img src="{{ URL::to('/').'/data/'.$Reviewsval->photo}}" alt="  {!! $Reviewsval->id !!} ">
                                             </div>
                                             <div class="clntdtl">
-                                                <h3> {!! $Reviewsval->name !!}  </h3>
+                                                <h3>   </h3>
+                                                <br>
                                                 <span> {!! $Reviewsval->job !!} </span>
                                             </div>
                                         </div>
@@ -309,7 +310,7 @@ echo $first_part ;  ?> ... </p>
                         <h3>Looking for a quality and affordable Services</h3>
                     </div>
                     <div class="col-sm-7">
-                        <p> {{ site_settings("About Us")  }} </p>
+                        <p> {{ site_settings("quality")  }} </p>
                     </div>
                 </div>
             </div>

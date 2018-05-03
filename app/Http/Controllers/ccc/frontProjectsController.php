@@ -49,7 +49,9 @@ class frontProjectsController extends Controller
      */
     public function show($id)
     {
-        //
+        $Projects =   Projects::find($id); 
+        return view('layouts.project-single')->with('Projects', $Projects ) ;
+        
     }
 
     /**

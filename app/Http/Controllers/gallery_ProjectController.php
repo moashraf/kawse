@@ -56,6 +56,14 @@ class gallery_ProjectController extends AppBaseController
     public function store(Creategallery_ProjectRequest $request)
     {
         $input = $request->all();
+        $photoexplode = $request->img->getClientOriginalName();
+        $photoexplode = explode(".", $photoexplode);
+        $namerand = rand();
+        $namerand.= $photoexplode[0];
+        $imageNameGallery = $namerand . '.' . $request->img->getClientOriginalExtension();
+        $request->img->move(base_path() . '/public/data/', $imageNameGallery);
+        $input['img']=    $imageNameGallery;
+
 
         $galleryProject = $this->galleryProjectRepository->create($input);
 
@@ -93,6 +101,11 @@ class gallery_ProjectController extends AppBaseController
      */
     public function edit($id)
     {
+
+       
+
+
+
         $galleryProject = $this->galleryProjectRepository->findWithoutFail($id);
 
         if (empty($galleryProject)) {
@@ -113,7 +126,16 @@ class gallery_ProjectController extends AppBaseController
      * @return Response
      */
     public function update($id, Updategallery_ProjectRequest $request)
-    {
+    { $input = $request->all();
+        $photoexplode = $request->img->getClientOriginalName();
+        $photoexplode = explode(".", $photoexplode);
+        $namerand = rand();
+        $namerand.= $photoexplode[0];
+        $imageNameGallery = $namerand . '.' . $request->img->getClientOriginalExtension();
+        $request->img->move(base_path() . '/public/data/', $imageNameGallery);
+        $input['img']=    $imageNameGallery;
+
+
         $galleryProject = $this->galleryProjectRepository->findWithoutFail($id);
 
         if (empty($galleryProject)) {
@@ -122,7 +144,7 @@ class gallery_ProjectController extends AppBaseController
             return redirect(route('galleryProjects.index'));
         }
 
-        $galleryProject = $this->galleryProjectRepository->update($request->all(), $id);
+        $galleryProject = $this->galleryProjectRepository->update($input, $id);
 
         Flash::success('Gallery  Project updated successfully.');
 

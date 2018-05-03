@@ -2605,6 +2605,16 @@ transition: all 0.3s;
     padding-bottom: 20px;
 }
 
+
+.centerdevimg{
+    
+    margin: auto;
+    width: 50%;
+    border: 3px solid #b99538;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}
 .clntfeed p {
     color: #666;
     font-size: 18px;
@@ -2612,6 +2622,7 @@ transition: all 0.3s;
 }
 
 .clntimg {
+    border: #ae8b2d 1px solid;
     border-radius: 100%;
     float: left;
     height: 80px;
@@ -3246,6 +3257,7 @@ transition: all 0.3s;
 }
 
 .team-box h3 {
+    text-align: center;
     text-transform: uppercase;
     padding-top: 15px;
     color: #333;
@@ -3274,7 +3286,7 @@ transition: all 0.3s;
 .team-content {
     padding: 0 20px 10px;
     text-align: left;
-    background: #fff;
+    background: #dfdfdf;
 }
 
 .team-box .social > ul {

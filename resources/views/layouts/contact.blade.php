@@ -47,6 +47,7 @@
 
   
         </div>
+        
         <!--google map end-->
         <!-- contect-page-section -->
         <section class="contact-section">
@@ -96,9 +97,6 @@
                         <div class="inner-box">
                             <h2> {{ site_settings("Web site name")  }}   </h2>
 
-                            <div class="text">
-                             {{ site_settings("About Us")  }}
-                            </div>
 
                             <div class="contact-info">
                                 <ul>

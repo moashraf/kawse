@@ -14,6 +14,12 @@
  	 return   $siteStings_object->value ;
  }
 
+ function services_mn()
+ {
+	$services =   App\Models\services::take(10)->get();
+ 	 $services_object=(object)  $services ;
+ 	 return   $services ;
+ }
 
 
 

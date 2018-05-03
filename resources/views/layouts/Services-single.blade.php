@@ -21,18 +21,20 @@
         <!--Page Info end-->
 
         <!--blog-single Page-->
-        <section class="blog-home sec-padding blog-page blog-details">
+        <section class="blog-home sec-padding2222222222222  blog-page blog-details">
             <div class="container">
+
+            
                 <div class="row">
                     <div class="col-lg-12 pull-left">
                         <div class="single-blog-post">
-                            <div class="img-box">
-                                <img src="{{ URL::to('/').'/data/'.$services->photo}}" alt="">
+                            <div class="img-box222222222222222  centerdevimg ">
+                                <img src="{{ URL::to('/').'/data/'.$services->photo}}" style="    width: 100%;">
                                
                             </div>
                             <div class="content-box">
                                 <div class="content">
-                                    <a href=""><h3> {{  $services->title }} </h3></a>
+                                    <a href="#"><h3> {{  $services->title }} </h3></a>
                                     <p>  {{  $services->body }} </p>
                                     
                                     

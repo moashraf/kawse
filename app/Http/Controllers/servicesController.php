@@ -56,16 +56,13 @@ class servicesController extends AppBaseController
     public function store(CreateservicesRequest $request)
     {
         $input = $request->all();
-
-
-
-    $photoexplode = $request->photo->getClientOriginalName();
+                 $photoexplode = $request->photo->getClientOriginalName();
                 $photoexplode = explode(".", $photoexplode);
                 $namerand = rand();
                 $namerand.= $photoexplode[0];
                 $imageNameGallery = $namerand . '.' . $request->photo->getClientOriginalExtension();
                $request->photo->move(base_path() . '/public/data/', $imageNameGallery);
-$input['photo']=    $imageNameGallery;
+                $input['photo']=    $imageNameGallery;
 
 
         $services = $this->servicesRepository->create($input);

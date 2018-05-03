@@ -44,7 +44,7 @@ class siteStings extends Model
      * @var array
      */
     public static $rules = [
-        'key' => 'required',
+       
         'value' => 'required'
     ];
 
