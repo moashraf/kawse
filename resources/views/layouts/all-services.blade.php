@@ -3,7 +3,7 @@
         <!--Page Title-->
         <section class="page-title" style="background-image:url(images/background/page-title-1.jpg);">
             <div class="auto-container">
-                <h1>All Services</h1>
+                <h1>{{trans('file.Services')}}</h1>
             </div>
         </section>
         <!--Page Title end-->
@@ -12,7 +12,7 @@
         <section class="page-info">
             <div class="auto-container clearfix">
                 <div class="pull-left">
-                    <h3>All Services</h3>
+                    <h3>{{trans('file.Services')}}</h3>
                 </div>
                
             </div>
@@ -24,7 +24,7 @@
 		<section class="weltopservice">
             <div class="container">
                 <div class="sec-title text-center">
-                    <h2>Our Best Serivices</h2>
+                    <h2>{{trans('file.Services')}}</h2>
                      <span class="colorborder"></span>
                 </div>			
 				<div class="row">

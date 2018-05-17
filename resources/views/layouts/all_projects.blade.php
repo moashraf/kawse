@@ -5,7 +5,7 @@
         <!--Page Title-->
         <section class="page-title" style="background-image:url(images/background/page-title-1.jpg);">
             <div class="auto-container">
-                <h1>Projects</h1>
+                <h1> {{trans('file.Our Projects')}} </h1>
             </div>
         </section>
         <!--Page Title end-->
@@ -14,7 +14,7 @@
         <section class="page-info">
             <div class="auto-container clearfix">
                 <div class="pull-left">
-                    <h3>Projects</h3>
+                    <h3> {{trans('file.Our Projects')}} </h3>
                 </div>
                 
             </div>
@@ -26,7 +26,7 @@
         <section class="gallery-section  homegallery  ">
             <div class="auto-container">
                 <div class="sec-title text-center">
-                    <h2>Our  Featured Projects</h2>
+                    <h2>   {{trans('file.Our Projects')}}  </h2>
                     <span class="colorborder"></span>
                 </div>
                 <div class="mixitup-gallery">

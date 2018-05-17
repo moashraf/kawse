@@ -67,7 +67,7 @@
         <section class="hometestmon">
             <div class="container">
                 <div class="sec-title text-center">
-                    <h2>Our Happy Clients</h2>
+                    <h2> {{trans('file.our clients')}}     </h2>
                      <span class="colorborder"></span>
                 </div>
    <div class="auto-container">

@@ -4,7 +4,7 @@
         <!--Page Title-->
         <section class="page-title" style="background-image:url(images/background/page-title-1.jpg);">
             <div class="auto-container">
-                <h1>Contact Us</h1>
+                <h1>  {{trans('file.Contact Us')}} </h1>
             </div>
         </section>
         <!--Page Title end-->
@@ -13,7 +13,7 @@
         <section class="page-info">
             <div class="auto-container clearfix">
                 <div class="pull-left">
-                    <h3>Contact Us</h3>
+                    <h3>   {{trans('file.Contact Us')}} </h3>
                 </div>
                 
             </div>
@@ -55,36 +55,36 @@
                 <div class="row clearfix">
                     <!--Column-->
                     <div class="column col-md-7 col-sm-6 col-xs-12">
-                        <h2>Send Us Message</h2>
+                        <h2> {{trans('file.Send_Message')}} </h2>
                         <div class="contact-form default-form">
 							<form method="post" action="ajax/mail.php"  id="contact-form" novalidate="novalidate">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <div class="form-group">
-                                            <input name="name" value="" placeholder="Username" type="text">
+                                            <input name="name" value="" placeholder="{{trans('file.Name')}}" type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 col-sm-12">
                                         <div class="form-group">
-                                            <input name="email" value="" placeholder="Email" type="email">
+                                            <input name="email" value="" placeholder="{{trans('file.Email')}}" type="email">
                                         </div>
                                     </div>
 
                                     <div class="col-md-12 col-sm-12">
                                         <div class="form-group">
-                                            <input name="phone" value="" placeholder="Phone Number" type="text">
+                                            <input name="phone" value="" placeholder="{{trans('file.Number')}}" type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-md-12 col-sm-12">
                                         <div class="form-group">
-                                            <textarea name="message" placeholder="Message"></textarea>
+                                            <textarea name="message" placeholder="{{trans('file.Message')}}"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12 col-sm-12">
-										<button type="submit" class="btn-style-two">SEND</button>
+										<button type="submit" class="btn-style-two">{{trans('file.SEND')}}</button>
                                     </div>
                                     <div id="loading" style="display:none"><img src="images/ajax-loader.png" alt="loading"/></div>							
                                 </div>
@@ -102,15 +102,15 @@
                                 <ul>
                                     <li>
                                         <span class="icon flaticon-placeholder"></span>
-                                        <h3>Address</h3>{{ site_settings("Location")  }}
+                                        <h3>{{trans('file.Address')}}</h3>{{ site_settings("Location")  }}
                                     </li>
                                     <li>
                                         <span class="icon flaticon-envelope-1"></span>
-                                        <h3>Email</h3>{{ site_settings("Mail")  }}
+                                        <h3>{{trans('file.Email')}}</h3>{{ site_settings("Mail")  }}
                                     </li>
                                     <li>
                                         <span class="icon flaticon-phone-call"></span>
-                                        <h3>PHONE</h3> {{ site_settings("phone")  }}
+                                        <h3>{{trans('file.Number')}}</h3> {{ site_settings("phone")  }}
                                     </li>
                                 </ul>
                             </div>

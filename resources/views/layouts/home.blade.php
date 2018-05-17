@@ -23,8 +23,8 @@
 
                         <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-998-layer-3" data-x="left" data-hoffset="" data-y="center" data-voffset="180" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 50px;font-weight:500;">
                             <div class="slidebtns smooth-textbox">
-                                <a href="{!! route('contact.index') !!}" class="slidebtn1">Our Company</a>
-                                <a href="{!! route('contact.index') !!}" class="slidebtn2">Contact Us</a>
+                                <a href="{!! route('contact.index') !!}" class="slidebtn1"> {{trans('file.Our Company')}} </a>
+                                <a href="{!! route('contact.index') !!}" class="slidebtn2">    {{trans('file.Contact Us')}}</a>
                             </div>
 
                         </div>
@@ -51,7 +51,7 @@
 				<div class="welinfobox">
 					<h2>{{ site_settings("call action")  }}</h2>
 					
-					<a href="{{ URL::to('/contact')}}" class="welcontact">Contact Us</a>
+					<a href="{{ URL::to('/contact')}}" class="welcontact">    {{trans('file.Contact Us')}} </a>
 				</div>
 			</div>
 		</section>
@@ -62,7 +62,7 @@
 		<section class="weltopservice">
 			<div class="container">
                  <div class="sec-title text-center">
-                    <h2> Services     </h2>
+                    <h2>  {{trans('file.Services')}}     </h2>
                      <span class="colorborder"></span>
                 </div>
 				<div class="row">
@@ -90,7 +90,7 @@ $first_part = implode(" ", array_splice($pieces, 0, 10));
 echo $first_part ;  ?> ...
 								</p></a>
 								<div class="link">
-									<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}" class="readmore-btn">READ MORE</a>
+									<a href="{!! URL::to('/service/').'/'. $servicessval->id !!}" class="readmore-btn"> {{trans('file.READ MORE')}} </a>
 								</div>
 							</div>
 						</div>
@@ -112,7 +112,7 @@ echo $first_part ;  ?> ...
         <section class="gallery-section  homegallery glrybgimage">
             <div class="auto-container">
                 <div class="sec-title text-center">
-                    <h2>Our  Featured Projects</h2>
+                    <h2>  {{trans('file.Our Projects')}}  </h2>
                     <span class="colorborder"></span>
                 </div>
                 <div class="mixitup-gallery">
@@ -170,7 +170,7 @@ echo $first_part ;  ?> ... </p>
                 <div class="row">
                     <div class="col-sm-7 testsplwrp">
                         <div class="sec-title text-left">
-                            <h2>What our clients say</h2>
+                            <h2> {{trans('file.clients say')}} </h2>
                             <span class="colorborder"></span>
                         </div>
                         <div class="testm-wrp">
@@ -252,7 +252,7 @@ echo $first_part ;  ?> ... </p>
                                     <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="quotetext">
                                             <div class="sec-title text-left">
-                                                <h2 class="lftheading">Request for Quote</h2>
+                                                <h2 class="lftheading">    {{trans('file.Request')}}</h2>
                                                 <span class="colorborder"></span>
                                             </div>
                                             <p class="quotecallinfo">  <span> {{ site_settings("call action")  }}</span></p>
@@ -262,29 +262,25 @@ echo $first_part ;  ?> ... </p>
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
-                                                    <input name="name" value="" placeholder="Username *" type="text">
+                                                    <input name="name" value="" placeholder=" {{trans('file.Name')}} *" type="text">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input name="email" value="" placeholder="Email *" type="email">
+                                                    <input name="email" value="" placeholder=" {{trans('file.Email')}} *" type="email">
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <input name="phone" value="" placeholder="Phone Number *" type="text">
+                                                    <input name="phone" value="" placeholder=" {{trans('file.Number')}}" type="text">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-6 col-sm-12 col-xs-12">
-                                                <div class="form-group">
-                                                    <input name="subject" value="" placeholder="Subject" type="text">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <textarea name="message" placeholder="Message *"></textarea>
+                                                     <div class="form-group">
+                                                    <textarea name="message" placeholder=" {{trans('file.Message')}}"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">
                                                 <div class="text-left">
-													<button type="submit" class="btn-two">SEND</button>        
+													<button type="submit" class="btn-two"> {{trans('file.SEND')}}</button>        
                                                 </div>
 												<div id="loading" style="display:none"><img src="images/ajax-loader.png" alt="loading"/></div>
                                             </div>

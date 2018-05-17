@@ -98,20 +98,16 @@
 
 
                                  <ul class="navigation clearfix">
-                                
-
-
-                                        
                                         <li class=" {{ Request::is('/') ? 'current' : '' }} ">
-                                            <a href="{!!  URL::to('/'); !!}">Home</a>
+                                            <a href="{!!  URL::to('/'); !!}">{{trans('file.Home')}}</a>
                                        </li>
                                         <li class=" {{ Request::is('about') ? 'current' : '' }} " >
-                                            <a href="{!! route('about.index') !!}">About Us</a>
+                                            <a href="{!! route('about.index') !!}">  {{trans('file.About Us')}}  </a>
                                           
                                         </li>
 										
 										 <li class=" {{ Request::is('service') ? 'current' : '' }}  dropdown">
-                                         <a href="{!! route('service.index') !!}">Services</a>
+                                         <a href="{!! route('service.index') !!}">{{trans('file.Services')}}</a>
                                             <ul>
                                         <?php   $services=  services_mn()  ; ?>
 											 @foreach($services as $servicessval)
@@ -121,16 +117,16 @@
                                         <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
 										
                                         <li  class=" {{ Request::is('Projects') ? 'current' : '' }} " ">
-                                            <a href="{!! route('Projects.index') !!}">Our Projects</a>
+                                            <a href="{!! route('Projects.index') !!}"> {{trans('file.Our Projects')}} </a>
                                            
                                         </li   >
                                         
                                         <li class=" {{ Request::is('client') ? 'current' : '' }} "  >
-                                            <a href="{!! route('client.index') !!}">our clients</a>
+                                            <a href="{!! route('client.index') !!}">  {{trans('file.our clients')}} </a>
                                              
                                         </li   >
                                         <li class=" {{ Request::is('contact') ? 'current' : '' }} " >
-                                            <a href="{!! route('contact.index') !!}">Contact Us</a>
+                                            <a href="{!! route('contact.index') !!}">{{trans('file.Contact Us')}}</a>
                                         </li>
                                     </ul>
 
@@ -174,15 +170,15 @@
 
                                         
                                         <li class=" {{ Request::is('/') ? 'current' : '' }} ">
-                                            <a href="{!!  URL::to('/'); !!}">Home</a>
+                                            <a href="{!!  URL::to('/'); !!}">{{trans('file.Home')}}</a>
                                        </li>
                                         <li class=" {{ Request::is('about') ? 'current' : '' }} " >
-                                            <a href="{!! route('about.index') !!}">About Us</a>
+                                            <a href="{!! route('about.index') !!}">{{trans('file.About Us')}} </a>
                                           
                                         </li>
 										
 										 <li class=" {{ Request::is('service') ? 'current' : '' }}  dropdown">
-                                         <a href="{!! route('service.index') !!}">Services</a>
+                                         <a href="{!! route('service.index') !!}">{{trans('file.Services')}}</a>
                                             <ul>
 											 @foreach($services as $servicessval)
 											 <li><a href=" {{ URL::to('/').'/service/'.$servicessval->id }} ">{!! $servicessval->title !!}  </a></li>
@@ -191,16 +187,16 @@
                                         <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
 										
                                         <li  class=" {{ Request::is('Projects') ? 'current' : '' }} " ">
-                                            <a href="{!! route('Projects.index') !!}">Our Projects</a>
+                                            <a href="{!! route('Projects.index') !!}">{{trans('file.Our Projects')}} </a>
                                            
                                         </li   >
                                         
                                         <li class=" {{ Request::is('client') ? 'current' : '' }} "  >
-                                            <a href="{!! route('client.index') !!}">our clients</a>
+                                            <a href="{!! route('client.index') !!}"> {{trans('file.our clients')}} </a>
                                              
                                         </li   >
                                         <li class=" {{ Request::is('contact') ? 'current' : '' }} " >
-                                            <a href="{!! route('contact.index') !!}">Contact Us</a>
+                                            <a href="{!! route('contact.index') !!}"> {{trans('file.Contact Us')}} </a>
                                         </li>
                                     </ul>
 
@@ -234,9 +230,7 @@
                             $About=site_settings("About Us");
       $pieces = explode(" ",$About );
 $first_part = implode(" ", array_splice($pieces, 0, 91)); 
-
 echo $first_part ;  ?>
-
   </p>
                            
 
@@ -328,10 +322,9 @@ echo $first_part ;  ?>
 
     </div>
     <!--End pagewrapper-->
-
     <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target=".site-header"><span class="icon fa fa-long-arrow-up"></span></div>
-
+    <div class="scroll-to-top scroll-to-target" data-target=".site-header">
+    <span class="icon fa fa-long-arrow-up"></span></div>
     <!-- jquery Liabrary -->
     <script src=" {{ asset('js/jquery-1.12.4.min.js') }} "></script>
     <!-- bootstrap v3.3.6 js -->
@@ -348,7 +341,6 @@ echo $first_part ;  ?>
     <script src=" {{ asset('js/mixitup.js') }} "></script>
     <!-- validate js -->
     <script src=" {{ asset('js/validate.js') }} "></script>
-
     <!-- REVOLUTION JS FILES -->
     <script type="text/javascript" src=" {{ asset('js/revolution/jquery.themepunch.tools.min.js') }} "></script>
     <script type="text/javascript" src=" {{ asset('js/revolution/jquery.themepunch.revolution.min.js') }} "></script> 
